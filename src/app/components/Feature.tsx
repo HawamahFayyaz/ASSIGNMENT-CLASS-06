@@ -58,7 +58,7 @@ export default function Feature() {
           />
           <CarCard
             href="/cars/Alto"
-            imageSrc="/alto.png"
+            imageSrc="/Alto.png"
             name="Suzuki Alto"
             price="PKR 23.3 - 30.5 lacs"
             year="2023"
