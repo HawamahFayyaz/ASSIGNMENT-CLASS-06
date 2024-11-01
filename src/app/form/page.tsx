@@ -11,7 +11,7 @@ export default function Form() {
   const router = useRouter();
 
   const validateForm = () => {
-    let formErrors: { [key: string]: string } = {};
+    const formErrors: { [key: string]: string } = {};
 
     if (!name.trim()) formErrors.name = "Name is required";
     if (!email.trim()) formErrors.email = "Email is required";
