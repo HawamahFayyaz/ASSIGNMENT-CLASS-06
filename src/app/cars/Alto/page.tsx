@@ -2,66 +2,136 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Alto() {
+export default function CarDetail() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">
-          Suzuki Alto 2024 Details
-        </h1>
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-sm mb-4 bg-white px-4 py-2 rounded-lg shadow-sm">
+            <Link href="/" className="text-blue-600 hover:underline">
+              Home
+            </Link>
+            <span className="mx-2 text-gray-500">{">"}</span>
+            <Link href="/new-cars" className="text-blue-600 hover:underline">
+              New Cars
+            </Link>
+            <span className="mx-2 text-gray-500">{">"}</span>
+            <span className="text-gray-800 font-medium">Suzuki Alto</span>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="relative h-[400px]">
+          <h1 className="text-4xl font-bold text-center mb-8 text-gray-900 bg-white py-4 rounded-lg shadow-md">
+            Suzuki Alto 2024
+          </h1>
+
+          <div className="relative h-[500px] w-full mb-8 bg-white rounded-xl shadow-lg overflow-hidden">
             <Image
               src="/Alto.png"
-              alt="Suzuki Alto 2024"
+              alt="Suzuki Alto"
               fill
-              className="object-cover rounded-lg"
+              className="object-contain p-4 hover:scale-105 transition-transform duration-300"
               priority
             />
           </div>
 
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Suzuki Alto 2024</h2>
-            <p className="text-gray-600">
-              Suzuki Alto 2024 has always enjoyed a healthy market share in
-              developing countries, mainly due to its economic price and fuel
-              economy. It was introduced in Pakistan in 1979 and instantly
-              became popular. Initially known as Suzuki FX, it was the cheapest
-              car in the market and came with three engine configurations: 539cc
-              T5B, 543cc F5A, and 796cc F8B.{" "}
-            </p>
-            <ul className="list-group">
-              <li className="list-group-item">Number of Doors: 4</li>
-              <li className="list-group-item">Engine: 1800 CC</li>
-              <li className="list-group-item">Condition: 8.5/10</li>
-              <li className="list-group-item">Driven: 9,500 KM</li>
-              <li className="list-group-item">
-                Suspension Type: Soft Suspension
-              </li>
-              <li className="list-group-item">Avg 12 KM per Itr</li>
-              <li className="list-group-item">Transmission: Automatic</li>
-              <li className="list-group-item">Fuel Type: High Octane</li>
-            </ul>
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-green-600">
-                PKR 3,256,000
-              </h3>
+          <div className="text-center mb-8 bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg">
+            <div className="text-4xl font-bold text-green-600 mb-4">
+              PKR 3,250,000
+            </div>
+            <div className="flex justify-center gap-6">
               <Link href="/form">
-                <button className="mt-4 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
-                  Make Payment
+                <button className="bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-4 rounded-lg hover:from-green-700 hover:to-green-600 transition duration-300 shadow-md">
+                  Book Now
                 </button>
               </Link>
+              <button className="bg-white border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition duration-300 shadow-md">
+                Get Insurance Quote
+              </button>
             </div>
           </div>
-        </div>
 
-        <Link
-          href="/"
-          className="inline-block mt-8 text-blue-500 hover:underline"
-        >
-          ← Back to Home
-        </Link>
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">
+              About Suzuki Alto 2024
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Suzuki Alto 2024 is a small and economical helps it maneuver
+              through urban traffic. The rear lights are integrated into the
+              bumper and the headlights and turn signals are integrated into one
+              unit. The size of the front grille is small and it is the same on
+              all three models. Colored door mirrors and handles are only
+              offered in the VXL variant. Moreover, retractable mirrors are also
+              only available in the VXL variant.
+            </p>
+          </div>
+
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 mb-8">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">
+              Key Features
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition-colors duration-300">
+                <div className="text-gray-700 mb-1">Engine</div>
+                <div className="font-semibold text-gray-900">1800 CC</div>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition-colors duration-300">
+                <div className="text-gray-700 mb-1">Transmission</div>
+                <div className="font-semibold text-gray-900">Automatic</div>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition-colors duration-300">
+                <div className="text-gray-700 mb-1">Fuel Type</div>
+                <div className="font-semibold text-gray-900">High Octane</div>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition-colors duration-300">
+                <div className="text-gray-700 mb-1">Mileage</div>
+                <div className="font-semibold text-gray-900">12 KM/L</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 mb-8">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">
+              Technical Specifications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Number of Doors</span>
+                <span className="font-semibold text-gray-900">4</span>
+              </div>
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Condition</span>
+                <span className="font-semibold text-gray-900">8.0/10</span>
+              </div>
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Driven</span>
+                <span className="font-semibold text-gray-900">12,500 KM</span>
+              </div>
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Suspension Type</span>
+                <span className="font-semibold text-gray-900">
+                  Soft Suspension
+                </span>
+              </div>
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Average</span>
+                <span className="font-semibold text-gray-900">
+                  12 KM per Ltr
+                </span>
+              </div>
+              <div className="flex justify-between py-3 border-b border-gray-200 hover:bg-gray-50 px-2 rounded transition-colors duration-300">
+                <span className="text-gray-700">Transmission</span>
+                <span className="font-semibold text-gray-900">Automatic</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/">
+              <button className="text-blue-600 hover:text-blue-800 font-semibold hover:underline transition duration-300 bg-white px-6 py-3 rounded-lg shadow-md">
+                ← Back to Home
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

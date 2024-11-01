@@ -1,77 +1,73 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="grid grid-cols-1 bg-white h-[400px] w-full">
-      <div className="row-span-1 flex justify-center">
-        <h1 className="text-gray-700 font-bold text-2xl pt-10">
+    <div className="bg-gray-50 py-10">
+      <div className="container mx-auto max-w-6xl px-4">
+        <h1 className="text-[#1e40af] font-bold text-2xl text-center mb-8">
           Sell Your Car on PakWheels and Get the Best Price
         </h1>
-      </div>
-      <div className="grid grid-cols-5 grid-rows-5 px-52 justify-center">
-        {/* Left Section */}
-        <div className="col-span-2 row-span-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 bg-white">
-          <h1 className="text-blue-900 font-semibold text-xl pt-4 pl-8">
-            Post Your Ad on PakWheels
-          </h1>
-          <div className="pt-3 pl-8">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">Post your Ad for Free in 3 Easy Steps</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">Get Genuine offers from Verified Buyers</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">Sell your car Fast at the Best Price</p>
-              </div>
-            </div>
-            <div className="pt-6">
-              <button className="rounded-md bg-rose-700 h-12 w-52 hover:bg-rose-800 transition-colors duration-300">
-                <Link href="#" className="text-white w-full h-full flex items-center justify-center">
+        
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
+
+          <div className="bg-white rounded-lg shadow-md p-8 flex-1 hover:shadow-lg transition-shadow duration-300">
+            <div className="max-w-md">
+              <h2 className="text-[#1e40af] font-semibold text-xl mb-6">
+                Post Your Ad on PakWheels
+              </h2>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">Post your Ad for Free in 3 Easy Steps</p>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">Get Genuine offers from Verified Buyers</p>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">Sell your car Fast at the Best Price</p>
+                </li>
+              </ul>
+              <Link href="/post-ad">
+                <button className="w-full bg-[#dc2626] text-white font-semibold py-3.5 px-4 rounded hover:bg-[#b91c1c] transition duration-300 text-base">
                   Post Your Ad
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
-        </div>
 
-        {/* Middle OR Section */}
-        <div className="flex items-center pr-8 col-span-1 row-span-4 justify-center">
-          <div className="bg-white px-4 py-2 rounded-full text-slate-500 text-2xl font-medium shadow-sm">
-            OR
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="col-span-2 row-span-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 bg-white">
-          <h1 className="text-blue-900 font-semibold text-xl pt-4">
-            Try PakWheels Sell It For Me
-          </h1>
-          <div className="pt-3">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">Dedicated Sales Expert to Sell your Car</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">We Bargain for you and share the Best Offer</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500 font-bold">•</span>
-                <p className="text-slate-600">We ensure Safe & Secure Transaction</p>
-              </div>
+          <div className="flex items-center justify-center mx-4">
+            <div className="bg-white px-6 py-2 rounded-full text-gray-500 text-xl font-medium shadow-sm">
+              OR
             </div>
-            <div className="pt-6">
-              <button className="rounded-md bg-blue-500 h-12 w-52 hover:bg-blue-600 transition-colors duration-300">
-                <Link href="#" className="text-white w-full h-full flex items-center justify-center">
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8 flex-1 hover:shadow-lg transition-shadow duration-300">
+            <div className="max-w-md">
+              <h2 className="text-[#1e40af] font-semibold text-xl mb-6">
+                Try PakWheels Sell It For Me
+              </h2>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">Dedicated Sales Expert to Sell your Car</p>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">We Bargain for you and share the Best Offer</p>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#dc2626] text-xl font-bold">•</span>
+                  <p className="text-gray-600 text-base">We ensure Safe & Secure Transaction</p>
+                </li>
+              </ul>
+              <Link href="/sell-it-for-me">
+                <button className="w-full bg-[#1e40af] text-white font-semibold py-3.5 px-4 rounded hover:bg-[#1e3a8a] transition duration-300 text-base">
                   Register Your Car
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
